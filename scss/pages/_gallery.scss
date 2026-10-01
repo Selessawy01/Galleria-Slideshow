@@ -1,0 +1,12 @@
+@use "../abstract/variables"   as v;
+@use "../abstract/breakpoints" as b;
+
+.gallery {
+
+  width            : min(100% , 90rem);
+  margin-inline    : auto;
+  padding-block    : clamp(v.$spacing-300,4vw,v.$spacing-500) ;
+}
+
+
+

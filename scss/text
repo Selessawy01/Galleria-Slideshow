@@ -1,0 +1,119 @@
+// -------------------------
+// Gallery
+// -------------------------
+
+const gallery = document.querySelector('.gallery');
+
+const tabletOrder = [
+  1, 8, 2, 9, 3, 10, 4, 11,
+  5, 12, 13, 6, 14, 7, 15
+];
+
+const desktopOrder = [
+  1, 5, 9, 12, 2, 6, 10, 13,
+  3, 7, 14, 4, 8, 11, 15
+];
+
+async function loadGallery() {
+  try {
+    const response = await fetch('./data.json');
+
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+
+    const artworks = await response.json();
+
+    artworks.forEach((artwork, index) => {
+      createGalleryCard(artwork, index);
+    });
+
+  } catch (error) {
+    console.error('Failed to load gallery:', error);
+  }
+}
+
+function createGalleryCard(artwork, index) {
+  const card = document.createElement('div');
+
+  card.classList.add('gallery__card');
+
+  card.style.setProperty(
+    '--order-tablet',
+    tabletOrder[index]
+  );
+
+  card.style.setProperty(
+    '--order-desktop',
+    desktopOrder[index]
+  );
+
+  card.innerHTML = `
+    <img
+      class="gallery__card-img"
+      src="${artwork.images.gallery.src}"
+      alt="${artwork.name}"
+      height="${artwork.images.gallery.height}"
+    >
+
+    <div class="gallery__card-desc">
+      <p class="gallery__card-title heading-lg">
+        ${artwork.name}
+      </p>
+
+      <p class="gallery__card-artist text-sm">
+        ${artwork.artist.name}
+      </p>
+    </div>
+  `;
+
+  const image = card.querySelector('.gallery__card-img');
+
+  image.addEventListener('error', () => {
+    console.error(`Image failed to load: ${image.src}`);
+  });
+
+  gallery.appendChild(card);
+}
+
+
+// -------------------------
+// Lightbox
+// -------------------------
+
+const viewImageButton = document.querySelector(
+  '.slideshow__view-image'
+);
+
+const closeButton = document.querySelector(
+  '.lightbox__close'
+);
+
+const lightbox = document.querySelector('.lightbox');
+
+
+function openLightbox() {
+  lightbox.classList.add('is-open');
+  lightbox.setAttribute('aria-hidden', 'false');
+
+  document.body.classList.add('no-scroll');
+}
+
+
+function closeLightbox() {
+  lightbox.classList.remove('is-open');
+  lightbox.setAttribute('aria-hidden', 'true');
+
+  document.body.classList.remove('no-scroll');
+}
+
+
+viewImageButton.addEventListener('click', openLightbox);
+closeButton.addEventListener('click', closeLightbox);
+
+
+// -------------------------
+// Initialize
+// -------------------------
+
+loadGallery();

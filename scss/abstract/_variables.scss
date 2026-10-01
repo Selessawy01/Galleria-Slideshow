@@ -1,0 +1,86 @@
+// ==============================
+// Colors
+// ==============================
+
+$white    : #FFFFFF;
+$black    : #000000;
+
+$white-75: rgba(255, 255, 255, 0.7528);
+
+$color-grey-400 : #7D7D7D;
+$color-grey-200 : #D8D8D8;
+$color-grey-150 : #E5E5E5;
+$color-grey-100 : #F3F3F3;
+
+
+
+// ==============================
+// Gradients
+// ==============================
+
+$overlay-gradient: linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0) 0%,
+                    rgba(0, 0, 0, 0.84) 100%
+);
+
+
+// ==============================
+// Spacing
+// ==============================
+
+$spacing-0   : 0px;
+$spacing-100 : 0.5rem;     // 8px
+$spacing-150 : 0.75rem;    // 12px
+$spacing-200 : 1rem;       // 16px
+$spacing-300 : 1.5rem;     // 24px
+$spacing-400 : 2rem;       // 32px
+$spacing-500 : 2.5rem;     // 40px
+$spacing-600 : 3rem;       // 48px
+$spacing-700 : 3.5rem;     // 56px
+$spacing-800 : 4rem;       // 64px
+$spacing-900 : 4.5rem;     // 72px;
+$spacing-1000: 5rem;       // 80px
+$spacing-1200: 6rem;       // 96px
+
+
+// ==============================
+// Typography
+// ==============================
+
+// Font Families
+$ff-libre    : "Libre Baskerville", serif;
+
+// Font sizes
+$fs-9:   0.5625rem;  // 9px
+$fs-10:  0.625rem;   // 10px
+$fs-12:  0.75rem;    // 12px
+$fs-13:  0.8125rem;  // 13px
+$fs-14:  0.875rem;   // 14px
+$fs-15:  0.9375rem;  // 15px
+$fs-18:  1.125rem;   // 18px
+$fs-24:  1.5rem;     // 24px
+$fs-56:  3.5rem;     // 56px
+$fs-100: 6.25rem;    // 100px
+$fs-200: 12.5rem;    // 200px
+
+$fw-bold      : 700;
+$fw-regular   : 400;
+
+
+
+// ==============================
+// Semantic tokens
+// ==============================
+
+$primary-txt-clr   : $color-grey-400;
+$secondary-txt-clr : $black  ;
+$inverse-txt-clr   : $white  ;
+$watermark-txt-clr : $color-grey-100;
+$muted-txt-clr     : $white-75;
+
+$btn-txt-clr       : $color-grey-400;
+$btn-bg-clr        : $black;
+$btn-txt-hover-clr : $black;
+
+$divider-clr       : $color-grey-150;

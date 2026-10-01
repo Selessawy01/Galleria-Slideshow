@@ -1,0 +1,52 @@
+@use "../abstract/variables"   as v;
+@use "../abstract/breakpoints" as b;
+
+.btn {
+    
+    border        : none;
+    background    : none;
+    cursor        : pointer;
+}
+
+.gallery__card-button {
+  position  : relative;
+  display   : block;
+  width     : 100%;
+  height    : 100%;
+  padding   : 0;
+  border    : 0;
+  background: none;
+  text-align: left;
+  cursor    : pointer;
+}
+.viewimage-btn{
+    background-color : v.$btn-bg-clr;
+    padding          : 0.875rem 1rem ;
+}
+
+.next-prev-btn {
+    width  : clamp(1.0625rem,4vw,1.5625rem);
+    height : clamp(1rem,4vw,1.5rem);
+}
+
+.next-prev-btn:hover {
+   // background-color : v.$white-75;
+   color: v.$color-grey-200;
+}
+
+.next-prev-btn:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+}
+
+.next-prev-btn:disabled img {
+    opacity: 0.2;
+}
+
+.header__btn:hover,
+.artist__link:hover {
+    background-color : v.$white-75;
+    color            : v.$btn-txt-hover-clr;
+}
+
+

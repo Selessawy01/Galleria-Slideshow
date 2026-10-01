@@ -1,0 +1,21 @@
+@use "./abstract/breakpoints";
+@use "./abstract/variables";
+
+@use "./base/reset";
+@use "./base/typography"; 
+
+@use "./components/container";
+@use "./components/card";
+@use "./components/header";
+@use "./components/btn";
+@use "./components/lightbox";
+@use "./components/divider";
+
+@use "./pages/_gallery.scss";
+@use "./pages/_slideshow.scss";
+
+@use "./utilities/utilities";
+
+
+
+

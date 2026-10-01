@@ -1,0 +1,8 @@
+@use "../abstract/variables"   as v;
+
+.divider{
+    width            : min(100%, 85rem);
+    background-color : v.$divider-clr;
+    margin-inline    : auto;
+    height           : 1px;
+}

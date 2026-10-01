@@ -1,0 +1,64 @@
+@use "../abstract/variables"   as v;
+@use "../abstract/breakpoints" as b;
+
+
+
+.header__container {
+    width            : min(100% - 3rem, 85rem);
+    height          : 2rem;
+    margin-inline   : auto;
+
+    display         : flex;
+    flex-direction  : row;
+    justify-content : space-between ;
+    align-items     : center;
+ 
+
+    @media(min-width: b.$bp-xl){
+    height          : 3rem;
+    }
+}
+
+.gallery__container {
+
+  display         : flex;
+  flex-direction  : column;
+  gap             : v.$spacing-500;
+
+  width           : fit-content;
+  margin-inline   : auto;
+
+  @media(min-width :b.$bp-md){
+
+  width          : 41.25em;
+  height         : 176.25em;
+  flex-wrap      : wrap;
+  }
+
+  @media(min-width :b.$bp-xl){
+  height        : 86.875rem;  
+  width         : 85rem;
+  }
+  
+} 
+
+.slideshow__container{
+    max-width       : 20.4375rem;
+    margin-inline   : auto;
+
+    display         : flex;
+    flex-direction  : column;
+    
+    @media(min-width: b.$bp-md){
+    max-width       : 43rem;
+    gap             : v.$spacing-800;
+    }
+
+    @media(min-width: b.$bp-xl) {
+    max-width             : 85rem;
+    display               : grid;
+    grid-template-columns : 62.4% 35%;
+    gap                   : 2.25rem;
+    height                : 39rem;
+    }
+}

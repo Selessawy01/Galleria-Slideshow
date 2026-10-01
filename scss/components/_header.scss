@@ -1,0 +1,12 @@
+@use "../abstract/variables" as v;
+
+.header{
+   // padding-top    : clamp(24px,4vw,40px);
+   // padding-bottom : clamp(24px,4vw,40px);
+    padding-block  : clamp(v.$spacing-300,4vw,v.$spacing-500) ;
+}
+
+.header__logo {
+    width  : 7.0625rem;
+    height : 2rem;
+}

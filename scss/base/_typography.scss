@@ -1,0 +1,111 @@
+@use "../abstract/variables"   as v;
+@use "../abstract/breakpoints" as b;
+
+body {
+    font-family: v.$ff-libre;
+}
+
+.galleria-text-lg{
+    color        : v.$inverse-txt-clr;
+    font-size    : v.$fs-24;
+    font-weight  : v.$fw-bold;
+  
+}
+.galleria-text-sm {
+    color        : v.$muted-txt-clr;
+    font-size    : v.$fs-13;
+    font-weight  : v.$fw-regular;
+    line-height  : 125%;
+}
+.btn-txt {
+    font-size      : clamp(v.$fs-9,2vw,v.$fs-12);
+    font-weight    : v.$fw-bold;
+    color          : v.$btn-txt-clr;
+    line-height    : 125%;
+    letter-spacing : 2px;
+    
+}
+
+.slideshow__text-name{
+
+    font-size      : clamp(v.$fs-24,8vw,v.$fs-56);
+    font-weight    : v.$fw-bold;
+    line-height    : 125%;
+    letter-spacing : 0px;
+    color          : v.$secondary-txt-clr;
+
+    @media(min-width:48rem){
+    line-height    : 115%;
+    }
+}
+
+.slideshow__text-artist{
+    font-size      : v.$fs-15;
+    font-weight    : v.$fw-regular;
+    line-height    : 135%;
+    letter-spacing : 0px;
+    color          : v.$primary-txt-clr;
+}
+
+.slideshow__text-viewimage {
+    font-size       : v.$fs-10;
+    line-height     : 120%;
+    letter-spacing  : 2px;
+    color           : v.$inverse-txt-clr;
+
+}
+.slideshow__text-content{
+    font-size       : v.$fs-14;
+    font-weight     : v.$fw-bold;
+    line-height     : 200%;
+    letter-spacing  : -0.25px;
+    color           : v.$primary-txt-clr;
+}
+
+.slideshow__text-year{
+    font-size       : clamp(v.$fs-100,30vw,v.$fs-200);
+    font-weight     : v.$fw-bold;
+    line-height     : 100%;
+    letter-spacing  : 0px;
+    color           : v.$watermark-txt-clr;
+
+    @media(min-width:48rem){
+    line-height     : 115%;
+    letter-spacing  : -0.2px;
+    }
+}
+.artist__link{
+    font-size       : v.$fs-9;
+    font-weight     : v.$fw-bold;
+    line-height     : 125%;
+    letter-spacing  : 2px;
+    color           : v.$primary-txt-clr;
+    text-decoration : none ;
+}
+
+.footer_header{
+    font-size      : clamp(v.$fs-14,3vw,v.$fs-18);
+    font-weight    : v.$fw-bold;
+    line-height    : 200%;
+    letter-spacing : -0.25px;
+    color          : v.$secondary-txt-clr ;
+
+    @media(min-width: 48rem){
+    line-height    : 125%;
+    }
+}
+.footer_artist {
+    font-size      : clamp(v.$fs-10,2.5vw,v.$fs-13);
+    font-weight    : v.$fw-regular;
+    line-height    : 120%;
+    letter-spacing : 0px;
+    color          : v.$secondary-txt-clr ;
+
+     @media(min-width: 48rem){
+    line-height    : 125%;
+    }
+}
+
+.uppercase {
+    text-transform : uppercase;
+}
