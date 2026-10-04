@@ -308,7 +308,7 @@ body {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.9);
   opacity: 0;
-  visibility: invisible;
+  visibility: hidden;
   pointer-events: none;
   transition: opacity 200ms ease, visibility 200ms ease;
 }
@@ -420,7 +420,6 @@ body {
 
 .slideshow__hero-img {
   width: 100%;
-  height: 100;
   display: block;
   z-index: 0;
 }
@@ -557,6 +556,18 @@ body {
   width: var(--progress, 0%);
   background-color: #000000;
   transition: width 300ms ease;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .slideshow__footer {

@@ -1,6 +1,7 @@
 /****  Gallery ****/
 
 const gallery = document.querySelector('.gallery');
+const errorMessage = document.querySelector('.gallery__error');
 const galleryContainer = document.querySelector('.gallery__container');
 
 const tabletOrder = [
@@ -36,6 +37,7 @@ const footerArtist = document.querySelector('.footer_artist');
 
 const lightboxImage = document.querySelector('.lightbox__image');
 const slideshowIndex = document.querySelector('.slideshow__index');
+const slideAnnouncement = document.querySelector('.sr-only');
 
 const previousButton = document.querySelector(
   '.slideshow__footer-buttons .next-prev-btn:first-child'
@@ -101,6 +103,8 @@ async function loadGallery() {
 
   } catch (error) {
     console.error('Failed to load gallery:', error);
+      errorMessage.textContent = 'Sorry, we could not load the gallery. Please try again.';
+      errorMessage.classList.remove('hidden');
   }
 } 
 
@@ -142,8 +146,7 @@ function createGalleryCard(artwork, index) {
         ${artwork.name}
       </p>
 
-      <p class="gallery__card-artist galleria-text-sm {
-">
+      <p class="gallery__card-artist galleria-text-sm >
         ${artwork.artist.name}
       </p>
     </div>
@@ -175,6 +178,9 @@ function updateProgress() {
     '--progress',
     `${progress}%`
   );
+  const artwork = artworks[currentIndex];
+  slideAnnouncement.textContent =
+  `Artwork ${currentIndex + 1} of ${artworks.length}: ${artwork.name}`;
 }
 
 //*** Update Slideshow ***/

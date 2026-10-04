@@ -28,6 +28,7 @@
   <main>
      <!-- Gallery -->
     <section class="gallery" aria-label="Artworks">
+      <p class="gallery__error hidden" role="alert"></p>
       <div class="gallery__container">
       </div>
     </section>
@@ -48,7 +49,7 @@
 
             <div class="slideshow__hero-desc">
                <div class="slideshow__hero-title">
-                <p class="slideshow__text-name"> Starry Night</p>
+                <h1 class="slideshow__text-name"> Starry Night</h1>
                 <p class="slideshow__text-artist">Vincent Van Gogh</p>
               </div>
               <div class="slideshow__hero-artist">
@@ -74,6 +75,7 @@
           </div>
       </div>
       <div class="slideshow__index" aria-live="polite" aria-atomic="true"></div>
+      <div class="sr-only" aria-live="polite" aria-atomic="true"></div>
       <div class="slideshow__footer">
 
             <div class="slideshow__footer-content">
@@ -90,7 +92,7 @@
   </main>
 
     <!-- Lightbox -->
-  <div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Artwork image" aria-labelledby="lightbox-title">
+  <div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Artwork image">
     <div class="lightbox__wrapper">
       <button class="lightbox__close btn uppercase" type="button"> Close
       </button>
