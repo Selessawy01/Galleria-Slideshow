@@ -146,7 +146,7 @@ function createGalleryCard(artwork, index) {
         ${artwork.name}
       </p>
 
-      <p class="gallery__card-artist galleria-text-sm >
+      <p class="gallery__card-artist galleria-text-sm">
         ${artwork.artist.name}
       </p>
     </div>
